@@ -1,0 +1,65 @@
+html {
+  width: 100%;
+  height: 100%;
+  body {
+    #map_container {
+      margin-right: 100px;
+      float: left;
+      width: 64*8;
+    }
+    #activity_log {
+      float: left;
+      color: red;
+    }
+    background: #333;
+  }
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+.map_row {
+  float: left;
+  clear: both;
+  .map_cell {
+    float: left;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: solid 2px black;
+    background: #711;
+    text-align: center;
+    position: relative;
+
+    .secret_room {
+      background: #0c0;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+    }
+
+    .treasure {
+      background: #cc0;
+      width: 20px;
+      height: 20px;
+    }
+
+    .player, .dragon {
+      z-index: 100;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 16px;
+      height: 16px
+    }
+
+    &.wall1 { border-top: solid 2px #f33; }
+    &.wall2 { border-right: solid 2px #f33; }
+    &.wall4 { border-bottom: solid 2px #f33; }
+    &.wall8 { border-left: solid 2px #f33; }
+
+
+  }
+}
